@@ -46,10 +46,10 @@ public class productsAdapter {
         public View getView(final int position, View android.view.View convertView;
         convertView, ViewGroup parent) {
             ViewHolder holder;
-            final Product rowItem = (Product) getItem(position);
+            final Product rowItem = (products) getItem(position);
             LayoutInflater mInflater = (LayoutInflater) this.context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             if (convertView == null) {
-                convertView = mInflater.inflate(R.layout.adapter_product_item, null);
+                convertView = mInflater.inflate(R.layout.adapter_produtc_item, null);
                 holder = new ViewHolder();
 //            holder.image = (ImageView) convertView.findViewById(R.id.image);
                // holder.image = (NetworkImageView)convertView.findViewById(R.id.image);
@@ -63,7 +63,7 @@ public class productsAdapter {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            holder.name.setText(rowItem.getName());
+            holder.name.setText(rowItem.name);
            // holder.price.setText(rowItem.getPriceText());
             ///holder.description.setText(rowItem.getDescription());
             //holder.category.setText(rowItem.getCategory());
